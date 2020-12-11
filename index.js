@@ -1,7 +1,7 @@
 
 // setting the number generators to a variable
-var random1 = random1();
-var random2 = random2();
+var random1 = Math.floor(Math.random() * 6) + 1;
+var random2 = Math.floor(Math.random() * 6) + 1;
 
 // setting a variable for DOM navigation for ease of use
 var imageSelect1 = document.querySelector(".img1");
@@ -45,17 +45,4 @@ if(random1 > random2) {
   headingSelect.innerHTML = "Player 2 Wins!";
 } else {
   headingSelect.innerHTML = "Draw!";
-}
-
-// random number generators for each player to roll 1-6
-function random1() {
-  var randNum1 = Math.floor(Math.random() * 6) + 1;
-
-  return randNum1
-}
-
-function random2() {
-  var randNum2 = Math.floor(Math.random() * 6) + 1;
-
-  return randNum2
 }
