@@ -8,35 +8,15 @@ var imageSelect1 = document.querySelector(".img1");
 var imageSelect2 = document.querySelector(".img2");
 var headingSelect = document.querySelector("h1");
 
+// setting a variable that automatically selects the image based on the random number
+var randImgSrc1 = "images/dice" + random1 + ".png";
+var randImgSrc2 = "images/dice" + random2 + ".png";
+
 // based on random1 set the img1 src via setAttribute();
-if(random1 === 1) {
-  imageSelect1.setAttribute("src", "images/dice1.png")
-} else if (random1 === 2) {
-  imageSelect1.setAttribute("src", "images/dice2.png")
-} else if (random1 === 3) {
-  imageSelect1.setAttribute("src", "images/dice3.png")
-} else if (random1 === 4) {
-  imageSelect1.setAttribute("src", "images/dice4.png")
-} else if (random1 === 5) {
-  imageSelect1.setAttribute("src", "images/dice5.png")
-} else {
-  imageSelect1.setAttribute("src", "images/dice6.png")
-}
+imageSelect1.setAttribute("src", randImgSrc1);
 
 // based on random2 set the img2 src via setAttribute
-if(random2 === 1) {
-  imageSelect2.setAttribute("src", "images/dice1.png")
-} else if (random2 === 2) {
-  imageSelect2.setAttribute("src", "images/dice2.png")
-} else if (random2 === 3) {
-  imageSelect2.setAttribute("src", "images/dice3.png")
-} else if (random2 === 4) {
-  imageSelect2.setAttribute("src", "images/dice4.png")
-} else if (random2 === 5) {
-  imageSelect2.setAttribute("src", "images/dice5.png")
-} else {
-  imageSelect2.setAttribute("src", "images/dice6.png")
-}
+imageSelect2.setAttribute("src", randImgSrc2);
 
 // check if player 1 or two wins then change h1 accordingly
 if(random1 > random2) {
